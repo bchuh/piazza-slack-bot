@@ -28,10 +28,14 @@ variables, push, and you should be good to go.
    ```
    python .\app.py
    ```
-3. Use ngrok to deploy Local API.
+3. Use ngrok to deploy Local API, run in the ngrok.exe folder.
+   If first time installing ngrok, download ngrok and add your token.
    ```
    ngrok config add-authtoken <your-authtoken>
-   ngrok config add-authtoken
    ```
-4. Copy the deployed API and copy to Request URL field in https://api.slack.com/apps/A07KZA9D8SX/interactive-messages?.
+   Get the deployed API.
+   ```
+   ngrok http 3000
+   ```
+5. Copy the deployed API and copy to Request URL field in https://api.slack.com/apps/A07KZA9D8SX/interactive-messages?.
    ![image](https://github.com/user-attachments/assets/c511775b-8dcf-48d2-949b-70aeaf99d539)
