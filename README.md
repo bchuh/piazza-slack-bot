@@ -18,3 +18,33 @@ in the config.
 
 This app should be ready to deploy on Heroku or Dokku; just set the environment
 variables, push, and you should be good to go.
+
+#### Local testing
+1. Run slack bot.
+   ```
+   python .\bot.py
+   ```
+2. Run Flask App.
+   ```
+   python .\app.py
+   ```
+3. Use ngrok to deploy Local API, run in the ngrok.exe folder.
+
+
+   If first time installing ngrok, download ngrok and add your token.
+   ```
+   ngrok config add-authtoken <your-authtoken>
+   ```
+   Get the deployed API.
+   ```
+   ngrok http 3000
+   ```
+   Example:
+   ![image](https://github.com/user-attachments/assets/5c426ea8-a537-448f-895b-3d2f90101445)
+
+5. Copy the deployed API and copy to Request URL field in these two places.
+   1. https://api.slack.com/apps/A07KZA9D8SX/interactive-messages?.
+      ![image](https://github.com/user-attachments/assets/c511775b-8dcf-48d2-949b-70aeaf99d539)
+   2. https://api.slack.com/apps/A07KZA9D8SX/event-subscriptions?success=1
+      ![image](https://github.com/user-attachments/assets/c03f8608-58f1-44e3-a87d-dbb30d52a719)
+
